@@ -8,8 +8,72 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class AddressBookSystem {
-	
+public class AddressBookSystem {Scanner s = new Scanner(System.in);
+
+class Entry{
+	private String firstName = null;
+    private String lastName = null;
+    private String address=null;
+    private String city=null;
+    private String state=null;
+    private String zip=null;
+    private String phoneNumber=null;
+    private String email = null;
+    
+    public Entry(String firstName, String lastName, String address, String city, String state, String zip,
+			String phoneNumber, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
+	Entry(){
+        firstName = "";
+        lastName = "";
+        address = "";
+        city = "";
+        state = ""; 
+        zip= ""; 
+        phoneNumber = "";
+        email = "";
+        
+    }
+    public void readEntry(){
+        System.out.println("First Name:"+firstName );
+        System.out.println("Last Name:"+lastName );
+        System.out.println("Address:"+address );
+        System.out.println("Address:"+city );
+        System.out.println("Address:"+state );
+        System.out.println("Address:"+zip );
+        System.out.println("Address:"+phoneNumber );
+        System.out.println("Email:"+email );
+    }
+}
+
+private int entries = 0;
+Entry[] contents;
+public void initEntries(int e){
+    contents = new Entry[e];
+    for (int i = 0;i<contents.length;i++){      
+        contents[i] = new Entry();
+    }
+}
+public int getEntries(){
+    return contents.length;
+}
+
+public void add(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber,String email){
+    if (entries<contents.length){
+    contents[entries] = new Entry(firstName, lastName, address, city,state,zip,phoneNumber,email);
+    entries++;
+    }
+    else System.out.println("Error: book is full");
+}	
 public static void main(String[] args) {
 	 System.out.println("Welcome to Address Book Program");
 	 choice();
