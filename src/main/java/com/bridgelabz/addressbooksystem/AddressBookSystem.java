@@ -16,7 +16,7 @@ public static void main(String[] args) {
 }
 	 public static void choice() {
      Scanner scanner=new Scanner(System.in);
-     System.out.println("For create and add contact press 1");
+     System.out.println("For create and add multiple contact press 1");
      System.out.println("For edit contact press 2");
      System.out.println("For delete contact press 3");
      System.out.println("Exit 4");
