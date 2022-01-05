@@ -49,21 +49,21 @@ public class AddressBook {
 			String firstName, lastName, address,city,state,zip,phoneNumber,email;
 			switch(selection){
 			case 1: 
-				System.out.print("First name? ");
+				System.out.print("First name: ");
 				firstName = scanner.next();
-				System.out.print("Last name? ");
+				System.out.print("Last name: ");
 				lastName = scanner.next();
-				System.out.print("Address? ");
+				System.out.print("Address: ");
 				address = scanner.next();
-				System.out.print("city? ");
+				System.out.print("city: ");
 				city = scanner.next();
-				System.out.print("state? ");
+				System.out.print("state: ");
 				state = scanner.next();
-				System.out.print("zip? ");
+				System.out.print("zip: ");
 				zip = scanner.next();
-				System.out.print("phone number? ");
+				System.out.print("phone number: ");
 				phoneNumber = scanner.next();
-				System.out.print("Email? ");
+				System.out.print("Email: ");
 				email = scanner.next();
 				library[selectedBook].add(firstName, lastName, address,city,state,zip,phoneNumber,email);
 				break;
